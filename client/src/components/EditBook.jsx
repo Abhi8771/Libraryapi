@@ -19,7 +19,7 @@ const EditBook = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/book/book/${id}`, { withCredentials: true })
+      .get(`https://libraryapi-server3.onrender.com/book/book/${id}`, { withCredentials: true })
       .then((res) => {
         setName(res.data.name);
         setAuthor(res.data.author);
@@ -36,7 +36,7 @@ const EditBook = () => {
     e.preventDefault();
     axios
       .put(
-        `http://localhost:3001/book/book/${id}`,
+        `https://libraryapi-server3.onrender.com/book/book/${id}`,
         { name, author, imageUrl },
         { withCredentials: true }
       )
