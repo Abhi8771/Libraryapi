@@ -10,7 +10,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3001/dashboard', { withCredentials: true })
+      .get('https://libraryapi-server3.onrender.com/dashboard', { withCredentials: true })
       .then((res) => {
         if (res.data.ok) {
           setStudents(res.data.student);
